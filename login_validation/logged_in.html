@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var time_on_load
+        var abc
+        var def
+        var time_on_logout
+        window.onload=function(){
+            var today = new Date();
+            var time_on_load = parseInt(today.getHours() *3600)+parseInt( today.getMinutes()*60) + parseInt( today.getSeconds());
+            abc=time_on_load
+        }
+        
+
+        function logout(){
+            var mins
+            var sec
+            var hrs
+            var today = new Date();
+            var time_on_logout = parseInt(today.getHours() *3600)+parseInt( today.getMinutes()*60) + parseInt( today.getSeconds());
+            def=time_on_logout
+            duration=def-abc
+            
+            alert("the duration is : "+duration +"sec")
+        }
+        
+    </script>
+</head>
+<body>
+    you have successfully logged in 
+    <button onclick="logout()">Click to logout</button>
+</body>
+</html>
